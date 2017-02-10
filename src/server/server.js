@@ -1,11 +1,11 @@
 import path from 'path'
 import express from 'express'
+import morgan from 'morgan'
 import webpack from 'webpack'
 import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware from 'webpack-hot-middleware'
 
 import webpackConfig from '../../webpack.config'
-
 
 const PORT = 3000
 const server = express()
@@ -13,6 +13,10 @@ const server = express()
 
 delete process.env.BROWSER
 
+
+server.use(
+  morgan(':remote-addr - - :date[clf] :method :url HTTP/:http-version :status -'),
+)
 
 /**
  ***************************************

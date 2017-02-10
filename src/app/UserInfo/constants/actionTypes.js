@@ -1,3 +1,1 @@
-const ADD_ITEM = 'ADD_ITEM'
-
-export default ADD_ITEM
+export const FETCH_USER_INFO = 'FETCH_USER_INFO'

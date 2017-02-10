@@ -10,18 +10,18 @@
 
 # Instructions
 
-## Installing dependencies
+## Install dependencies
 
 `npm install`
 
-## Bundling app
+## Build app
 
-`npm run bundle`
+`npm run build`
 
-## Running the app
+## Run the app
 
 `npm start`
 
-## Running the tests
+## Run the tests
 
 `npm test`
