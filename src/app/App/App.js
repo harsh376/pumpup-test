@@ -1,11 +1,11 @@
 import React from 'react'
-import SomeComponent from '../SomeComponent/SomeComponent'
+import UserInfo from '../UserInfo/UserInfo'
 
-require('../SomeComponent/stylesheets/SomeComponent.scss')
+require('../UserInfo/stylesheets/UserInfo.scss')
 
 function App(props) {
   return (
-    <SomeComponent />
+    <UserInfo />
   )
 }
 

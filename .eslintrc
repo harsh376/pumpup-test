@@ -75,5 +75,9 @@
   },
   "plugins": [
     "react"
-  ]
+  ],
+  "globals": {
+    "expect": false,
+    "jest": false
+  },
 }

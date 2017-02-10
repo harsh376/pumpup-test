@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
-import SomeComponent from './SomeComponent/reducers/reducers'
+import UserInfo from './UserInfo/reducers/reducers'
 
 
 export default combineReducers({
-  SomeComponent,
+  UserInfo,
 })
