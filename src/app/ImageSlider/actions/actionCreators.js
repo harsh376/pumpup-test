@@ -1,7 +1,9 @@
 import fetch from 'isomorphic-fetch'
 
 import {
+  INIT_SLIDER_IMAGES,
   FETCH_IMAGES,
+  UPDATE_SELECTED_IMAGE,
 } from '../constants/actionTypes'
 
 
@@ -10,6 +12,21 @@ const SESSION_TOKEN = [
   'MiOjI3MDc3OTgsImV4cCI6MTUzOTUzNTI1OTM2OH0.U',
   'K2qP1yk9QLk_Bkx1Ly0RPaitRYtec8ojZhzYRc0D-g'
 ].join('')
+
+export function initImages() {
+  return function initImages(dispatch) {
+    dispatch({ type: INIT_SLIDER_IMAGES })
+  }
+}
+
+export function updateSelectedImage(imageIndex) {
+  return function updateSelectedImage(dispatch) {
+    dispatch({
+      type: UPDATE_SELECTED_IMAGE,
+      imageIndex,
+    })
+  }
+}
 
 /**
  *****************
