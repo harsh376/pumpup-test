@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchUserInfo } from './actions/action_creators'
+import { fetchUserInfo } from './actions/actionCreators'
 
 export class UserInfo extends React.Component {
   constructor(props) {

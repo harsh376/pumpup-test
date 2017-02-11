@@ -20,7 +20,7 @@ function getParsedBio(bio) {
     let mentionLink = `https://twitter.com/${linkedText}`
     const l = isHashTag ? hashLink : mentionLink
 
-    parts[i] = <a key={'link' + i} href={l}>{parts[i]}</a>
+    parts[i] = <a key={'link' + i} href={l} target="_blank">{parts[i]}</a>
   }
   return parts
 }

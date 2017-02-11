@@ -1,0 +1,12 @@
+@import '../../App/stylesheets/App';
+
+$borderWidth: 2px;
+
+.ImagesGridContainer {
+  width: 100%;
+}
+
+.image-single {
+  width: ($appWidth - ($borderWidth * 2 * 3)) / 3;
+  border: $borderWidth solid $appBackground;
+}

@@ -1,5 +1,10 @@
+$appWidth: 380px;
+$appBackground: #eee;
+$appPadding: 10px;
+
 .app-container {
-  width: 600px;
-  background: #eee;
+  width: $appWidth;
+  background: $appBackground;
   margin: auto;
+  padding: 0px $appPadding;
 }

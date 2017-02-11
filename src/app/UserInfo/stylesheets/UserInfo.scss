@@ -1,11 +1,16 @@
+@import '../../App/stylesheets/App';
+
+$leftWidth: 120px;
+$rightWidth: $appWidth - $leftWidth;
+
 .UserInfoContainer {
-  height: 175px;
+  height: 150px;
   width: 100%;
 }
 
 .left {
   height: 100%;
-  width: 30%;
+  width: $leftWidth;
 
   // to have the divs side by side
   float: left;
@@ -17,25 +22,24 @@
 
 .right {
   height: 100%;
-  width: 70%;
+  width: $rightWidth;
 
   // to have the divs side by side
   float: left;
 }
 
 .profile-pic {
-  height: 140px;
+  height: 100px;
   border-radius: 50%;
 
   // for aligning pic
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(0%, -50%);
 }
 
 .bio {
-  height: 100px;
+  height: 75px;
   line-height: 25px;
   overflow-y: auto;
 }

@@ -1,0 +1,13 @@
+@import '../../App/stylesheets/App';
+
+.ImageSliderContainer {
+  width: 100%;
+}
+
+.image-current {
+  width: $appWidth;
+}
+
+.image-selector {
+  height: 50px;
+}
