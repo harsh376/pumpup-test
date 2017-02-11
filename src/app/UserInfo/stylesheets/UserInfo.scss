@@ -1,5 +1,41 @@
-.some {
-  height: 40px;
-  width: 40px;
-  background: red;
+.UserInfoContainer {
+  height: 175px;
+  width: 100%;
+}
+
+.left {
+  height: 100%;
+  width: 30%;
+
+  // to have the divs side by side
+  float: left;
+  display: block;
+
+  // for aligning pic
+  position: relative;
+}
+
+.right {
+  height: 100%;
+  width: 70%;
+
+  // to have the divs side by side
+  float: left;
+}
+
+.profile-pic {
+  height: 140px;
+  border-radius: 50%;
+
+  // for aligning pic
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bio {
+  height: 100px;
+  line-height: 25px;
+  overflow-y: auto;
 }

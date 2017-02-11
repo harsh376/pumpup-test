@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { fetchUserInfo } from './actions/action_creators'
 
-
 export class UserInfo extends React.Component {
   constructor(props) {
     super(props)
@@ -14,7 +13,29 @@ export class UserInfo extends React.Component {
 
   render() {
     return (
-      <div className="some">This is some Component</div>
+      <div>
+        {this.props.isFetching && (
+          <div className="UserInfoFetching">
+            Fetching user info
+          </div>
+        )}
+
+        {!this.props.isFetching && (
+          <div className="UserInfoContainer">
+            <div className="left">
+              <img
+                className="profile-pic"
+                src={this.props.data.profileThumbnail}
+                alt="Profile Photo"
+              />
+            </div>
+            <div className="right">
+              <h4>{this.props.data.name}</h4>
+              <div className="bio">{this.props.data.bio}</div>
+            </div>
+          </div>
+        )}
+      </div>
     )
   }
 }
@@ -29,9 +50,9 @@ UserInfo.propTypes = {
 function mapStateToProps(state) {
   const { UserInfo } = state
   return {
-    isFetching: UserInfo.isFetching,
-    data: UserInfo.data,
-    error: UserInfo.error,
+    isFetching: UserInfo.isFetching || false,
+    data: UserInfo.data || {},
+    error: UserInfo.error || null,
   }
 }
 
