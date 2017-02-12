@@ -3,10 +3,19 @@ import React from 'react'
 
 
 /**
- * parses the bio and adds hyperlinks for hashtags and mentions
+ * parses the bio and adds links for hashtags and mentions
  *
  * @param  {String} bio
  * @return {[]} the bio with links
+ *
+ * @example
+ *    getParsedBio('what #puns @foo')
+ *      [
+ *        'what ',
+ *        <a key='link1' href='https://twitter.com/hashtag/puns?src=hash' target="_blank">#puns</a>,
+ *        <a key='link3' href='https://twitter.com/foo' target="_blank">@foo</a>,
+ *        '',
+ *      ]
  */
 function getParsedBio(bio) {
   const regex = /(?=[#@])(\S*)/g

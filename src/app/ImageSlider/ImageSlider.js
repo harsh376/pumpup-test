@@ -34,14 +34,12 @@ export class ImageSlider extends React.Component {
               className="image-current"
               src={images[selectedImageIndex].thumbnail}
             />
-
             <span
               className="left-arrow"
               onClick={() => updateSelectedImage(selectedImageIndex-1)}
             >
               <img className="image-arrow" src={leftArrow} />
             </span>
-
             <span
               className="right-arrow"
               onClick={() => updateSelectedImage(selectedImageIndex+1)}

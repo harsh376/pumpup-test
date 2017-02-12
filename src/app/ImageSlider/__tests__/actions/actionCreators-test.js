@@ -38,6 +38,8 @@ describe('/ImageSlider: actionCreators', () => {
     })
 
     it(`creates ${FETCH_IMAGES}_SUCCESS when fetching images has been done`, () => {
+
+      // Mocking out the API endpoint
       nock('http://api.pumpup.com')
         .post('/1/functions/feed/profile/load-batch')
         .reply(201, {

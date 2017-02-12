@@ -4,12 +4,22 @@ import {
   UPDATE_SELECTED_IMAGE,
 } from '../constants/actionTypes'
 
+
+// TODO: Replace with a placeholder/loading image
 const initialImages = [
   {
     thumbnail: 'https://static.pexels.com/photos/3247/nature-forest-industry-rails.jpg'
   },
 ]
 
+/**
+ *  @param  {Object}  state
+ *  @param  {Number}  newIndex  The index of the image that needs to be selected
+ *  @return {Object}  the new state
+ *
+ *  Checks if the newIndex is in range, returns new state with valid
+ *  selectedImageIndex
+ */
 function updateSelectedImage(state, newIndex) {
   const totalImages = state.images.length
   let index = newIndex

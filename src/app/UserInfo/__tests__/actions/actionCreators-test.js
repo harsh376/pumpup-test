@@ -13,6 +13,8 @@ describe('/UserInfo: fetchUserInfo', () => {
   })
 
   it(`creates ${FETCH_USER_INFO}_SUCCESS when fetching user has been done`, () => {
+
+    // Mocking out API call
     nock('http://api.pumpup.com')
       .post('/1/classes/User/318381')
       .reply(201, {
